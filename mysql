@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Install mysql
+sudo apt install mysql-server
+# Verify Installation
+sudo service mysql status

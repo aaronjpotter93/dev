@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo apt install age
+
+# FIXME * do I need to add more biz here for like moving the key to a secure location in my file system?

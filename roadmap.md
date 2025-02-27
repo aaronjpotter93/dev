@@ -1,5 +1,7 @@
 # Roadmap
 
+"Where do I put my Greenclip script in this project?"
+
 - [ ] get fancy with adding environment variables to select a version to run each install for. 
 - [ ] merge functionality of worker suite (runs) with project environment setup (project requiremnts: variables, keys with encryption) 
 - [ ] make a version of run that is os agnostic. maybe use docker? or not i don't know how docker fits into this? or how does virtual environments fit into this?

@@ -11,6 +11,7 @@ fi
 
 git clone https://github.com/aaronjpotter93/dev-env $HOME/personal/dev
 
+# What does this part do??
 pushd $HOME/personal/dev
 ./run
 popd

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Install
+curl -sSL https://navi-lang.org/install | bash
+
+# Verify Installation
+navi -h
+
+# Add to path
+export PATH="$HOME/.navi:$PATH"

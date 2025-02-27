@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Depends on libs running first
+pip3 install thefuck --user

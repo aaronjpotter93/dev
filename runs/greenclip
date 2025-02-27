@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# FIXME * this script depends on the libs script to run first
+
+# FIXME * copy this script to the greenclip config:
+# ~/.config/greenclip/greenclip-fzf.sh
+
+# FIXME * and add this:
+
+# ```
+# ctrl + shift + v
+#     ~/.config/greenclip/greenclip-fzf.sh
+# ```
+
+# FIXME * to this config:
+# ~/.config/sxhkd/sxhkdrc
+
+greenclip print | fzf --reverse --height 40% | xclip -selection clipboard
+xclip -selection clipboard -o | xsel -i -b
+xsel -o -b | xdotool type --clearmodifiers --file -
+
+Script Organization:
+
+# If you have many scripts, consider creating a dedicated directory for your scripts (e.g., ~/bin or ~/.local/bin) and adding it to your PATH environment variable. This makes it easier to run your scripts from any directory.

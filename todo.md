@@ -4,6 +4,8 @@
 - [x] copy ~/.zshrc properties over
 - [ ] where is primeagane installing **git**? he uses it in a lot of his runs
 - [ ] how is he handling the ~/.zshrc
+- [ ] add my terminal_scripts to the runs somehow
+- [ ] do I need to add more biz here for like moving the key to a secure location in my file system?
 - [ ] find and fix all FIXME's
 - [ ] fix docker ( i don't know what his code does)
 - [ ] does he handle security? like can his run script be ran by global users? and do i need to address that?

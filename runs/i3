@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Hello from i3!"
+# sudo apt install i3-wm
