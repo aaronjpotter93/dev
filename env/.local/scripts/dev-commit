@@ -1,0 +1,21 @@
+## I DON'T WANT THIS TO BE RUNNABLE UNTIL I ADJUST IT TO MY PERSONAL USE. RIGHT NOW THIS IS JUST COPY PASTED FROM THEPRIMEAGEN
+#!/usr/bin/env bash
+
+pushd ~/personal/dev/env/.config/nvim
+git add .
+git commit -m 'automated dev commit'
+git push
+popd
+
+pushd ~/personal/dev/tmux-sessionizer/
+git add .
+git commit -m 'automated dev commit'
+git push
+popd
+
+pushd ~/personal/dev
+git add .
+git commit -m 'automated dev commit'
+git push
+popd
+
