@@ -1,11 +1,13 @@
 #!/bin/bash
-set -e  # Exit immediately if any command fails
+set -e
+
+# Configure timezone non-interactively
+export DEBIAN_FRONTEND=noninteractive
+export TZ="America/Denver"
 
 # Install dependencies
-sudo apt -y install python3-pip
-sudo apt-get install wget -y
-sudo apt install -y gpg
-sudo apt -y install git
+sudo apt update
+sudo apt -y install python3-pip wget gpg git tzdata
 
 # Configure Git
 git config --global user.email "aaronjpotter93@gmail.com"
