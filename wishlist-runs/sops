@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Install from official Go binaries
+curl -LO https://github.com/mozilla/sops/releases/latest/download/sops-$(uname -m).deb
+sudo apt install -y ./sops-*.deb

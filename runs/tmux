@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-apt install tmux
+# Refresh package lists first
+sudo apt update
+sudo apt install -y tmux

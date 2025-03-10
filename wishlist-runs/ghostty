@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Download latest Ghostty .deb
+curl -LO https://github.com/ghosttyapp/ghostty/releases/latest/download/ghostty_linux_$(uname -m).deb
+
+# Install with dependencies
+sudo apt install -y ./ghostty_linux_*.deb
