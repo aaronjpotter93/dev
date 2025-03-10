@@ -1,16 +1,21 @@
-#!/usr/bin/env bash
-sudo apt -y update
+#!/bin/bash
+set -e  # Exit immediately if any command fails
 
-if ! command -v git &> /dev/null; then
-    sudo apt -y install git
-fi
+# Install dependencies
+sudo apt -y install python3-pip
+sudo apt-get install wget -y
+sudo apt install -y gpg
+sudo apt -y install git
 
-if [ ! -d $HOME/personal ]; then
-    mkdir $HOME/personal
-fi
+# Configure Git
+git config --global user.email "aaronjpotter93@gmail.com"
+git config --global user.name "aaronjpotter93"
 
-git clone https://github.com/aaronjpotter93/dev $HOME/personal/dev
+# Create directory and clone repo
+mkdir -p "$HOME/personal"
+git clone https://github.com/aaronjpotter93/dev "$HOME/personal/dev"
 
-pushd $HOME/personal/dev
+# Navigate to the repo and run the script
+pushd "$HOME/personal/dev" > /dev/null
 ./run
-popd
+popd > /dev/null
