@@ -27,18 +27,17 @@ execute() {
   if [[ $dry == "1" ]]; then
     return
   fi
-    echo "$@"
+  (cd "$(dirname "$1")" && ./"$(basename "$1")")
 }
 
 log "$script_dir -- $filter"
 
-cd $script_dir
-scripts=$(find ./runs -maxdepth 1 -mindepth 1 -type f -executable)
+scripts=$(find "$script_dir/runs" -maxdepth 1 -mindepth 1 -type f -executable)
 
 for script in $scripts; do
   if echo "$script" | grep -qv "$filter"; then
     log "filtering $script"
     continue
   fi
-  execute ./$script
+  execute "$script"
 done
