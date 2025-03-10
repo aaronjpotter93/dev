@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
 
+# Add Mozilla signing key
+curl -s https://raw.githubusercontent.com/mozilla/sops/master/scripts/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/sops.gpg >/dev/null
+
+# Add Mozilla repository
+echo "deb [arch=arm64 signed-by=/usr/share/keyrings/sops.gpg] https://ppa.launchpadcontent.net/mozilla/ppa/ubuntu noble main" | sudo tee /etc/apt/sources.list.d/sops.list
+
+# Install SOPS
+sudo apt update
 sudo apt install sops

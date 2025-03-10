@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-sudo apt install ./ghostty_*.deb
+# Download latest Ghostty .deb
+curl -LO https://github.com/ghostty/ghostty/releases/latest/download/ghostty_linux_arm64.deb
+
+# Install with dependencies
+sudo apt install ./ghostty_linux_arm64.deb

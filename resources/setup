@@ -1,13 +1,9 @@
 #!/bin/bash
 set -e
 
-# Configure timezone non-interactively
-export DEBIAN_FRONTEND=noninteractive
-export TZ="America/Denver"
-
 # Install dependencies
 sudo apt update
-sudo apt -y install python3-pip wget gpg git tzdata
+sudo apt -y install wget gpg git
 
 # Configure Git
 git config --global user.email "aaronjpotter93@gmail.com"
