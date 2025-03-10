@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo apt -y install ripgrep
+
+# This as being problematic only because zsh is problematic. ripgrep is alwasy que'd to be installed after zsh and when zsh finishes installing it doesn't continue the process that handles all the instals from setup.sh, so it only installs it after exiting the docker container
